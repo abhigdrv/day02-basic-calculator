@@ -28,8 +28,81 @@
         <h1 class="text-2xl font-bold">day02-basic-calculator</h1>
         <p class="px-2">Perform arithmetic operations like addition, subtraction, multiplication, and division.</p>
     </header>
-    <section>
-        -
+    <section class="relative w-[100%] h-[100vh]">
+        <div class="w-[400px] h-[560px] border top-[50%] left-[50%] absolute translate-x-[-50%] translate-y-[-50%] bg-slate-600 rounded">
+            <div class="border border-1 h-[80px] m-2 bg-slate-300">
+                <span class="float-right px-4 py-5 text-2xl font-bold" id="screen">0</span>
+            </div>
+            <div class="border border-1 h-[450px] m-2 bg-slate-300" id="control">
+                <div class="grid grid-cols-4 ml-2 mt-2">
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg cursor-pointer" onclick="buttonPressed('clear')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold text-rose-600">Clear</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('back')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold"><--</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('%')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold">%</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('/')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold">/</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-4 ml-2 mt-2">
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('1')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >1</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('2')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >2</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('3')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >3</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('*')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >x</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-4 ml-2 mt-2">
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('4')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >4</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('5')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >5</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('6')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >6</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('-')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >-</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-4 ml-2 mt-2">
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('7')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >7</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('8')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >8</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('9')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >9</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('+')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >+</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-4 ml-2 mt-2">
+                    <div class="col-span-2 border border-1 h-[80px] w-[175px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('0')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >0</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('.')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >.</span>
+                    </div>
+                    <div class="border border-1 h-[80px] w-[80px] relative shadow-inner shadow-lg bg-slate-300 cursor-pointer" onclick="buttonPressed('=')">
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl font-bold" >=</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <footer class="p-2">
         <p class="text-center">Copyright &copy; 2024</p>
