@@ -1,5 +1,1 @@
-<!-- color pallet
-    #898AA6
-    #C9BBCF
-    #B7D3DF
-    #D6EFED -->
+# https://day02-basic-calculator.netlify.app/
